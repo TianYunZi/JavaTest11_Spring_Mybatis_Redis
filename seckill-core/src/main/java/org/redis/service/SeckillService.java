@@ -3,6 +3,9 @@ package org.redis.service;
 import org.redis.dto.Exposer;
 import org.redis.dto.SeckillExecution;
 import org.redis.entity.Seckill;
+import org.redis.exception.RepeatKillException;
+import org.redis.exception.SeckillCloseException;
+import org.redis.exception.SeckillException;
 
 import java.util.List;
 
@@ -42,7 +45,8 @@ public interface SeckillService {
      * @param md5
      * @return
      */
-    SeckillExecution executeSeckill(long seckillId, long userPhone, String md5);
+    SeckillExecution executeSeckill(long seckillId, long userPhone, String md5) throws RepeatKillException,
+            SeckillCloseException, SeckillException;
 
     /**
      * 执行秒杀操作by存储过程

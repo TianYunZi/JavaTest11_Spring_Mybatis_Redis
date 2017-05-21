@@ -38,6 +38,12 @@ public class Exposer {
         this.end = end;
     }
 
+    public Exposer(boolean exposed, long seckillId) {
+
+        this.exposed = exposed;
+        this.seckillId = seckillId;
+    }
+
     public boolean isExposed() {
         return exposed;
     }
@@ -84,12 +90,6 @@ public class Exposer {
 
     public void setEnd(long end) {
         this.end = end;
-    }
-
-    public Exposer(boolean exposed, long seckillId) {
-
-        this.exposed = exposed;
-        this.seckillId = seckillId;
     }
 
     @Override

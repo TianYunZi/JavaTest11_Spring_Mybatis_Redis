@@ -2,6 +2,7 @@ package org.redis.dao;
 
 import org.apache.ibatis.annotations.Param;
 import org.redis.entity.SuccessKilled;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created by Admin on 2017/5/19.

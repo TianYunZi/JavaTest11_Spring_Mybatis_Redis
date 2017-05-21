@@ -31,7 +31,7 @@ public enum SeckillStateEnum {
      * @param index 秒杀代码
      * @return 秒杀状态枚举
      */
-    private static SeckillStateEnum stateOf(int index) {
+    public static SeckillStateEnum stateOf(int index) {
         for (SeckillStateEnum state : values()) {
             if (state.getState() == index) {
                 return state;

@@ -2,6 +2,7 @@ package org.redis.dao;
 
 import org.apache.ibatis.annotations.Param;
 import org.redis.entity.Seckill;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.util.List;
