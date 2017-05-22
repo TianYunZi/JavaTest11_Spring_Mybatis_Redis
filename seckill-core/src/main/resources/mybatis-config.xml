@@ -22,6 +22,15 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
 
+    <typeHandlers>
+        <typeHandler handler="com.github.javaplugs.mybatis.InstantHandler"/>
+        <typeHandler handler="com.github.javaplugs.mybatis.LocalDateHandler"/>
+        <typeHandler handler="com.github.javaplugs.mybatis.LocalDateTimeHandler"/>
+        <typeHandler handler="com.github.javaplugs.mybatis.LocalTimeHandler"/>
+        <typeHandler handler="com.github.javaplugs.mybatis.OffsetDateTimeHandler"/>
+        <typeHandler handler="com.github.javaplugs.mybatis.ZonedDateTimeHandler"/>
+    </typeHandlers>
+
     <!-- Continue going here -->
 
 </configuration>

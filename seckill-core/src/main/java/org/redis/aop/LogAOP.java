@@ -28,6 +28,7 @@ public class LogAOP {
     @Around("aopMethod()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         String classType = joinPoint.getTarget().getClass().getName();
+        logger.info("classType: " + classType);
         //运用反射的原理创建对象
         Class<?> clazz = null;
         try {
@@ -36,6 +37,7 @@ public class LogAOP {
             String simpleName = clazz.getSimpleName();
             String methodName = joinPoint.getSignature().getName();
             Logger log = LoggerFactory.getLogger(clazzName);
+            log.info("simpleName: " + simpleName);
             log.info("clazzName: " + clazzName + ", methodName:" + methodName);
             log.info("在方法调用之前");
             log.info("-----------------------------------------------------");

@@ -36,6 +36,8 @@
         <property name="typeAliasesPackage" value="org.redis.entity"/>
         <!-- 扫描sql配置文件:mapper需要的xml文件 -->
         <property name="mapperLocations" value="classpath:mapper/SeckillDao.xml"/>
+        <!--MyBatis支持Java 8 时间类型-->
+        <property name="typeHandlersPackage" value="com.github.javaplugs.mybatis"/>
     </bean>
 
     <!-- 4.配置扫描Dao接口包，动态实现Dao接口，注入到spring容器中 -->
@@ -45,6 +47,8 @@
         <!-- 给出需要扫描Dao接口包 -->
         <property name="basePackage" value="org.redis.dao"/>
     </bean>
+
+    <context:component-scan base-package="org.redis.dao"/>
 
     <!-- RedisDao -->
     <bean id="redisDao" class="org.redis.dao.cache.RedisDao">

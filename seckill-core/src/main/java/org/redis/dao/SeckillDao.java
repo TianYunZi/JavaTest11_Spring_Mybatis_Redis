@@ -12,6 +12,7 @@ import java.util.Map;
  * Created by Admin on 2017/5/19.
  * 秒杀库存DAO接口
  */
+@Repository("seckillDao")
 public interface SeckillDao {
 
     /**
